@@ -28,3 +28,23 @@ h1{
     position: absolute;
     right: 12px;
 }
+
+#contenedor a {
+    padding: 16px 24px;
+    margin: 0px 1px;
+    background-color: hsl(287, 55%, 25%);
+    border-radius: 8px 8px 0px 0px;
+    text-decoration: none;
+    color: hsl(287, 55%, 83%);
+    transition: 300ms;
+    display: inline-block;
+}
+#contenedor a:hover{
+    background-color: hsl(287, 55%, 30%);
+}
+#contenedor p{
+    background-color: hsl(287, 55%, 25%);
+    padding: 24px;
+    font-size: 24px;
+    border-radius: 0px 12px 12px 12px;
+}

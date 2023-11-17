@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasar parámetros a funciones</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <h1>Pasar parámetros a funciones</h1>
+    <nav id="contenedor">
+        <a href="#" onclick="pintar( 'rgb(0, 120, 0)' )">verde</a>
+        <a href="#" onclick="pintar( '#f60' )">naranja</a>
+        <a href="#" onclick="pintar( 'hsl( 330, 100%, 75% )' )">rosa</a>
+    </nav>
+    <div id="caja"></div>
+    
+    <section id="contenedor2">
+        <input type="color" id="picker" value="#999999">
+        <button onclick="colorear()">pintar!</button>
+    </section>
+
+
+    <script src="js/parametros.js"></script>
+</body>
+</html>

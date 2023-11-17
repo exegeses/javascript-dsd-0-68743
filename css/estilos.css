@@ -57,3 +57,30 @@ h1{
     border-radius: 12px;
     padding: 32px 16px;
 }
+
+#contenedor2{
+    width: 256px;
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    #contenedor2 input{
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+        border: none;
+    }
+    #contenedor2 button {
+        padding: 8px 24px;
+        margin: 0px 1px;
+        background-color: hsl(287, 55%, 25%);
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        color: hsl(287, 55%, 83%);
+        transition: 300ms;
+    }
+    #contenedor2 button:hover{
+        background-color: hsl(287, 55%, 30%);
+    }

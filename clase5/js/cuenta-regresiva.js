@@ -5,13 +5,25 @@ const txtMinutos = document.querySelector('#txtMinutos');
 const txtSegundos = document.querySelector('#txtSegundos');
 const h1 = document.querySelector('h1');
 
+//variable auxiliar
+let intervalo = '';
 
 //declaramos función/es de control
+function dosDigitos( numero )
+{
+    if( numero < 10 ){
+        numero = '0'+ numero;
+    }
+    return numero;
+}
+
+
 function cuentaRegresiva()
 {
     // creamos obajetos de fecha
     const actual = new Date();
-    const final = new Date(2023, 10, 19, 8);// 8AM
+    //const final = new Date(2023, 10, 19, 8);// 8AM
+    const final = new Date(2023, 10, 22, 10, 45); // 10:45
 
     //calculamos la diferencia entre momentos de fecha
         // expresado en miliseguundos
@@ -43,18 +55,21 @@ function cuentaRegresiva()
     minutos = minutos % 60;
     segundos = segundos % 60;
 
-    if( segundos < 10 ){
-        segundos = '0'+ segundos;
+    if( 
+        dias <= 0 && 
+        horas <= 0 && 
+        minutos <= 0 && 
+        segundos <= 0  
+      )
+    {
+        h1.innerText = 'Oferta finalizada';
+        clearInterval( intervalo );
     }
-    if( minutos < 10 ){
-        minutos = '0'+ minutos;
-    }
-    if( horas < 10 ){
-        horas = '0'+ horas;
-    }
-    if( dias < 10 ){
-        dias = '0'+ dias;
-    }
+
+    segundos = dosDigitos( segundos );
+    minutos = dosDigitos( minutos );
+    horas = dosDigitos( horas );
+    dias = dosDigitos( dias );
 
 
     /* imprimimos en las span */
@@ -68,4 +83,4 @@ function cuentaRegresiva()
 cuentaRegresiva();
 
 //actualizamos el llamado a la función
-setInterval( cuentaRegresiva, 1000 )
+intervalo = setInterval( cuentaRegresiva, 1000 )

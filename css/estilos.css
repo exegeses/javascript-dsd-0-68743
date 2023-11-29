@@ -84,3 +84,29 @@ h1{
     #contenedor2 button:hover{
         background-color: hsl(287, 55%, 30%);
     }
+
+    #txt{
+        background-color: hsl(287, 55%, 8%);
+        font-size: 24px;
+        padding: 16px;
+        border-radius: 0px 8px 8px 8px;
+        display: inline-block;
+        min-width: 240px;
+    }    
+
+    #listado{
+        background-color: hsla(287, 55%, 50%, .2);
+        width: 520px;
+        padding: 24px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        #listado img{
+            filter: invert();
+            cursor: pointer;
+        }
+        #listado span{
+            font-size: 32px;
+        }
